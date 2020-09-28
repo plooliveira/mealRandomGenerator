@@ -1,0 +1,61 @@
+<div class="">
+  <div class=" columns is-centered is-mobile">
+    <div class=" column is-narrow ">
+      <div class="hero mt-6">
+        <div class="columns">
+          <div class="column is-9">
+            <h1 class=" title">
+              <%= @meal.title%>
+            </h1>
+            <h2 class="subtitle">
+              <%= @meal.country%> food
+            </h2>
+          </div>
+          <div class="column">
+            <a data-reflex="click->ExampleReflex#refresh" style="width: 158px;" href="#" class=" button is-primary">Get a new meal <i class="fas fa-utensils ml-2"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-4 has-text-centered">
+        <figure class="image meal-img">
+          <img class="" src="<%=@meal.image %>" alt="">
+        </figure>
+      </div>
+      <section class="section instructions">
+        <div class="columns">
+
+          <div class="column is-one-third">
+            <section class="section">
+              <div class="container">
+                <h1 class="title">Igredients</h1>
+                <ul class="menu-list">
+                  <% @meal.ingredients.each do |ingredient| %>
+                  <li>
+                    <%= ingredient[:name] %> <span> - <%= ingredient[:measure]%></span>
+                  </li>
+                  <%end%>
+                </ul>
+              </div>
+            </section>
+          </div>
+
+          <div class="coloumn">
+            <section class="section">
+              <div class="container">
+                <h1 class="title">Instructions</h1>
+                <p class="meal_desc">
+                  <%= @meal.description%>
+                </p>
+              </div>
+            </section>
+
+          </div>
+        </div>
+      </section>
+      <figure class="image is-16by9 mb-6">
+        <iframe class="has-ratio" width="640" height="360" src="<%=@meal.video%>" frameborder="0" allowfullscreen></iframe>
+      </figure>
+    </div>
+
+  </div>
+</div>
