@@ -12,7 +12,7 @@ Rails.application.configure do
       expire_after: 1.year,
       ttl: 1.year,
       key_prefix: "app:session:",
-      url: ENV.fetch("HEROKU_REDIS_MAROON_URL"),
+      url: ENV.fetch("redis://h:p3e902a5b5793ae4e571f9db40bf925280025353e6ccc66d51808267ea18a8c14@ec2-34-224-152-222.compute-1.amazonaws.com:31939"),
     }
   }
   # Eager load code on boot. This eager loads most of Rails and
