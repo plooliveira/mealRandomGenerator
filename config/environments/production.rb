@@ -11,7 +11,7 @@ Rails.application.configure do
     redis: {
       expire_after: 1.year,
       ttl: 1.year,
-      key_prefix: "app:session:",
+      key_prefix: "meal-random-generator:session:",
       url: ENV.fetch("HEROKU_REDIS_MAROON_URL"),
     }
   }
