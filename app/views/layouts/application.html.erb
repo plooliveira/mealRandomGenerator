@@ -4,6 +4,9 @@
 <head>
   <title>MealRandomGenerator</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property='og:title' content='Random Meal Generator' />
+  <meta property='og:image' content='https://images.unsplash.com/photo-1554998171-89445e31c52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1410&q=80' />
+  <meta property='og:description' content='A simple random meal generator <3' />
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,7 +16,7 @@
 <body>
   <%= yield %>
   <footer class="has-text-centered mb-4">
-    <p>Made with <i class="fas fa-heart" style="color: darkred;" aria-hidden="true"></i> <%= link_to "Paulo Oliveira", "https://github.com/plooliveira", :target => "_blank" %></p>
+    <p>Made with <i class="fas fa-heart" style="color: darkred;" aria-hidden="true"></i> <%= link_to "by Paulo Oliveira", "https://github.com/plooliveira", :target => "_blank" %></p>
   </footer>
 </body>
 
