@@ -12,7 +12,7 @@ class RequestMeal
   def self.meal_builder(data)
     meal_ingredients = []
     for i in 1..20
-      unless data["strIngredient#{i}"].empty?
+      unless data["strIngredient#{i}"].nil? || data["strIngredient#{i}"].empty?
         meal_ingredients << {
           name: data["strIngredient#{i}"],
           measure: data["strMeasure#{i}"]

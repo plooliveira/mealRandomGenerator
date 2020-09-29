@@ -103,6 +103,7 @@ GEM
       guard (~> 2.8)
       guard-compat (~> 1.0)
       multi_json (~> 1.8)
+    hiredis (0.6.3)
     http_parser.rb (0.6.0)
     httparty (0.18.1)
       mime-types (~> 3.0)
@@ -184,6 +185,9 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     redis (4.2.2)
+    redis-session-store (0.11.3)
+      actionpack (>= 3, < 7)
+      redis (>= 3, < 5)
     regexp_parser (1.8.0)
     rubyzip (2.3.0)
     sass-rails (6.0.0)
@@ -255,12 +259,15 @@ DEPENDENCIES
   capybara (>= 2.15)
   guard (~> 2.15)
   guard-livereload
+  hiredis
   httparty
   jbuilder (~> 2.7)
   listen (~> 3.2)
   puma (~> 4.1)
   rack-livereload
   rails (~> 6.0.3, >= 6.0.3.3)
+  redis (>= 4.0)
+  redis-session-store
   sass-rails (>= 6)
   selenium-webdriver
   spring

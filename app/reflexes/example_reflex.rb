@@ -22,6 +22,6 @@ class ExampleReflex < ApplicationReflex
   #
   # Learn more at: https://docs.stimulusreflex.com
   def refresh
-    puts "teste"
+    
   end
 end
